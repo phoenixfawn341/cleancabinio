@@ -1,0 +1,12 @@
+{
+  "name": "ip-blocker-6fd4f4",
+  "version": "1.0.0",
+  "description": "A ip blocker utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["ip-blocker", "utility"],
+  "license": "MIT"
+}

